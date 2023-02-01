@@ -5,6 +5,7 @@ import EducationSection from '../components/education/EducationSection';
 import ProjectSection from '../components/project/ProjectSection';
 
 export default function HomeScreen() {
+  const profile_pic = require('../../assets/images/profile-pic.jpg')
   const categories = [
     { title: 'Expérience', component: () => <ExperienceSection /> },
     { title: 'Éducation', component: () => <EducationSection /> },
@@ -16,9 +17,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <View style={styles.header}>
         <Image
-          source={{
-            uri: 'https://avatars.githubusercontent.com/u/46174829?v=4',
-          }}
+          source={profile_pic}
           style={styles.profilePic}
         />
         <Text style={styles.name}>Lory-Stan TANASI</Text>
