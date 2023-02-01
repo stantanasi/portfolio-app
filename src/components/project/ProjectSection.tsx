@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { IProject } from '../../types/project.type';
+import Project from './Project';
 
 export default function ProjectSection() {
   const [projects, setProjects] = useState<IProject[]>([]);
@@ -13,7 +14,9 @@ export default function ProjectSection() {
 
   return (
     <View style={styles.container}>
-      <Text>ProjectSection</Text>
+      {projects.map((project, index) => (
+        <Project key={index} project={project} />
+      ))}
     </View>
   )
 }
