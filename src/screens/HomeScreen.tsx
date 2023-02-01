@@ -1,5 +1,6 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
+import ExperienceSection from '../components/experience/ExperienceSection';
 
 export default function HomeScreen() {
   const [categorySelected, setCategorySelected] = useState(0);
@@ -27,6 +28,8 @@ export default function HomeScreen() {
           <Text>Projets</Text>
         </Pressable>
       </View>
+      {categorySelected === 0 &&
+        <ExperienceSection />}
     </View>
   )
 }
