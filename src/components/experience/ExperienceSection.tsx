@@ -6,8 +6,8 @@ import experiences from '../../data/experiences'
 export default function ExperienceSection() {
   return (
     <View style={styles.container}>
-      {experiences.map((experience) => (
-        <Experience experience={experience} />
+      {experiences.map((experience, index) => (
+        <Experience key={index} experience={experience} />
       ))}
     </View>
   )

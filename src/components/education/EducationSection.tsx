@@ -6,8 +6,8 @@ import educations from '../../data/educations'
 export default function EducationSection() {
   return (
     <View style={styles.container}>
-      {educations.map((education) => (
-        <Education education={education} />
+      {educations.map((education, index) => (
+        <Education key={index} education={education} />
       ))}
     </View>
   )
