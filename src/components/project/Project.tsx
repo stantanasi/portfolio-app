@@ -1,12 +1,19 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { IProject } from '../../types/project.type'
 
-export default function Project() {
+interface IProps {
+  project: IProject;
+}
+
+export default function Project({ project }: IProps) {
   return (
-    <View>
-      <Text>Project</Text>
+    <View style={styles.container}>
+      <Text>{project.name}</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {},
+})
