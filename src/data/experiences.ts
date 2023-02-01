@@ -3,7 +3,7 @@ import { IExperience } from "../types/experience.type";
 const experiences: IExperience[] = [
   {
     title: 'Développeur Android/Kotlin junior en alternance',
-    employementType: 'apprenticeship',
+    employementType: 'Contrat en alternance',
     companyName: '42c',
     location: 'Paris, Île-de-France, France',
     startDate: '2020-10',
@@ -12,7 +12,7 @@ const experiences: IExperience[] = [
   },
   {
     title: 'Stagiaire en électronique-informatique',
-    employementType: 'internship',
+    employementType: 'Stage',
     companyName: 'Leviathan Dynamics',
     location: 'La Courneuve, Île-de-France, France',
     startDate: '2020-05',
@@ -21,7 +21,7 @@ const experiences: IExperience[] = [
   },
   {
     title: 'Agent technique',
-    employementType: 'contract',
+    employementType: 'CDD',
     companyName: 'Centre Aquatique',
     location: 'Levallois-Perret, Île-de-France, France',
     startDate: '2018-08',

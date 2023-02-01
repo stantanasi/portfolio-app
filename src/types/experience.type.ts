@@ -1,6 +1,6 @@
 export interface IExperience {
   title: string;
-  employementType: 'permanent' | 'contract' | 'apprenticeship' | 'internship';
+  employementType: 'CDI' | 'CDD' | 'Contrat en alternance' | 'Stage';
   companyName: string;
   location: string;
   startDate: string;
