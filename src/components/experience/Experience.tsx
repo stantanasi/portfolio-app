@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { IExperience } from '../../data/experiences'
+import { IExperience } from '../../types/experience.type';
 
 interface IProps {
   experience: IExperience;

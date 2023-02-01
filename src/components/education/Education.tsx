@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { IEducation } from '../../data/educations'
+import { IEducation } from '../../types/education.type';
 
 interface IProps {
   education: IEducation;
