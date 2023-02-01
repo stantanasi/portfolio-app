@@ -2,12 +2,13 @@ import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import ExperienceSection from '../components/experience/ExperienceSection';
 import EducationSection from '../components/education/EducationSection';
+import ProjectSection from '../components/project/ProjectSection';
 
 export default function HomeScreen() {
   const categories = [
     { title: 'Expérience', component: () => <ExperienceSection /> },
     { title: 'Éducation', component: () => <EducationSection /> },
-    { title: 'Projets', component: () => <View /> },
+    { title: 'Projets', component: () => <ProjectSection /> },
   ]
   const [categorySelected, setCategorySelected] = useState(0);
 
