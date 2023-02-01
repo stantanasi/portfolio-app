@@ -1,7 +1,9 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function HomeScreen() {
+  const [categorySelected, setCategorySelected] = useState(0);
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -15,13 +17,13 @@ export default function HomeScreen() {
         <Text style={styles.headline}>Développeur full stack mobile/web chez 42c</Text>
       </View>
       <View style={styles.categories}>
-        <Pressable style={styles.category}>
+        <Pressable style={styles.category} onPress={() => setCategorySelected(0)}>
           <Text>Expérience</Text>
         </Pressable>
-        <Pressable style={styles.category}>
+        <Pressable style={styles.category} onPress={() => setCategorySelected(1)}>
           <Text>Éducation</Text>
         </Pressable>
-        <Pressable style={styles.category}>
+        <Pressable style={styles.category} onPress={() => setCategorySelected(2)}>
           <Text>Projets</Text>
         </Pressable>
       </View>
