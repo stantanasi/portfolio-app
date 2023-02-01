@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 export default function HomeScreen() {
@@ -13,6 +13,17 @@ export default function HomeScreen() {
         />
         <Text style={styles.name}>Lory-Stan TANASI</Text>
         <Text style={styles.headline}>Développeur full stack mobile/web chez 42c</Text>
+      </View>
+      <View style={styles.categories}>
+        <Pressable style={styles.category}>
+          <Text>Expérience</Text>
+        </Pressable>
+        <Pressable style={styles.category}>
+          <Text>Éducation</Text>
+        </Pressable>
+        <Pressable style={styles.category}>
+          <Text>Projets</Text>
+        </Pressable>
       </View>
     </View>
   )
@@ -29,4 +40,11 @@ const styles = StyleSheet.create({
   },
   name: {},
   headline: {},
+  categories: {
+    flexDirection: 'row',
+  },
+  category: {
+    alignItems: 'center',
+    flex: 1,
+  },
 })
