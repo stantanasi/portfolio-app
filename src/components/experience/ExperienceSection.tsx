@@ -1,12 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import React from 'react'
+import Experience from './Experience'
+import experiences from '../../data/experiences'
 
 export default function ExperienceSection() {
   return (
-    <View>
-      <Text>ExperienceSection</Text>
+    <View style={styles.container}>
+      {experiences.map((experience) => (
+        <Experience experience={experience} />
+      ))}
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {},
+}) 
