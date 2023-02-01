@@ -8,10 +8,13 @@ interface IProps {
 
 export default function Experience({ experience }: IProps) {
   return (
-    <View>
-      <Text>Experience</Text>
+    <View style={styles.container}>
+      <Text>{experience.title}</Text>
+      <Text>{experience.companyName} • {experience.employementType}</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {},
+})
