@@ -3,6 +3,11 @@ import React, { useState } from 'react'
 import ExperienceSection from '../components/experience/ExperienceSection';
 
 export default function HomeScreen() {
+  const categories = [
+    { title: 'Expérience', component: () => <ExperienceSection /> },
+    { title: 'Éducation', component: () => <View /> },
+    { title: 'Projets', component: () => <View /> },
+  ]
   const [categorySelected, setCategorySelected] = useState(0);
 
   return (
@@ -18,18 +23,17 @@ export default function HomeScreen() {
         <Text style={styles.headline}>Développeur full stack mobile/web chez 42c</Text>
       </View>
       <View style={styles.categories}>
-        <Pressable style={styles.category} onPress={() => setCategorySelected(0)}>
-          <Text>Expérience</Text>
-        </Pressable>
-        <Pressable style={styles.category} onPress={() => setCategorySelected(1)}>
-          <Text>Éducation</Text>
-        </Pressable>
-        <Pressable style={styles.category} onPress={() => setCategorySelected(2)}>
-          <Text>Projets</Text>
-        </Pressable>
+        {categories.map((category, index) => (
+          <Pressable
+            key={index}
+            style={styles.category}
+            onPress={() => setCategorySelected(index)}
+          >
+            <Text>{category.title}</Text>
+          </Pressable>
+        ))}
       </View>
-      {categorySelected === 0 &&
-        <ExperienceSection />}
+      {categories[categorySelected].component()}
     </View>
   )
 }
