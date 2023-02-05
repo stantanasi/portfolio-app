@@ -27,10 +27,14 @@ export default function HomeScreen() {
         {categories.map((category, index) => (
           <Pressable
             key={index}
-            style={styles.category}
+            style={[styles.category, { backgroundColor: categorySelected === index ? '#FFF' : '#FFFFFF00' }]}
             onPress={() => setCategorySelected(index)}
           >
-            <Text>{category.title}</Text>
+            <Text
+              style={[styles.categoryText, { color: categorySelected === index ? '#000' : '#888' }]}
+            >
+              {category.title}
+            </Text>
           </Pressable>
         ))}
       </View>
@@ -44,18 +48,40 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flex: 1,
   },
-  header: {},
+  header: {
+    margin: 20,
+  },
   profilePic: {
     width: 150,
     height: 150,
+    borderRadius: 20,
   },
-  name: {},
-  headline: {},
+  name: {
+    fontSize: 30,
+    fontWeight: '800',
+    marginTop: 12,
+    marginBottom: 4,
+  },
+  headline: {
+    color: '#808080',
+    fontSize: 14,
+    fontWeight: '600',
+  },
   categories: {
+    backgroundColor: '#EEEEEE',
+    borderRadius: 10,
     flexDirection: 'row',
+    marginHorizontal: 20,
+    marginVertical: 10,
   },
   category: {
     alignItems: 'center',
+    borderRadius: 8,
     flex: 1,
+    margin: 4,
+    padding: 5,
+  },
+  categoryText: {
+    fontWeight: 'bold',
   },
 })
