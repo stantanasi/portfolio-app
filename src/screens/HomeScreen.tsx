@@ -1,4 +1,4 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import ExperienceSection from '../components/experience/ExperienceSection';
 import EducationSection from '../components/education/EducationSection';
@@ -14,7 +14,7 @@ export default function HomeScreen() {
   const [categorySelected, setCategorySelected] = useState(0);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Image
           source={profile_pic}
@@ -35,13 +35,14 @@ export default function HomeScreen() {
         ))}
       </View>
       {categories[categorySelected].component()}
-    </View>
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
+    flex: 1,
   },
   header: {},
   profilePic: {
