@@ -18,11 +18,15 @@ export default function Experience({ experience }: IProps) {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#EEE',
+    borderRadius: 25,
     marginHorizontal: 20,
     marginVertical: 10,
+    padding: 20,
   },
   title: {
     color: '#000',
+    fontSize: 18,
     fontWeight: 'bold',
   },
   subtitle: {
