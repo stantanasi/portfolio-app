@@ -18,11 +18,15 @@ export default function Education({ education }: IProps) {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#EEE',
+    borderRadius: 25,
     marginHorizontal: 20,
     marginVertical: 10,
+    padding: 20,
   },
   school: {
     color: '#000',
+    fontSize: 18,
     fontWeight: 'bold',
   },
   degree: {
